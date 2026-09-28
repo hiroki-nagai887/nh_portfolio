@@ -1,0 +1,146 @@
+.seisaku-title {
+  font-weight: bold;
+  margin-bottom: 80px;
+  text-align: left;
+  margin-top: 200px;
+}
+
+.seisaku-title h2 {
+  font-size: 56px;
+  margin-bottom: 8px;
+  letter-spacing: 5px;
+  font-family: "Bebas Kai", sans-serif;
+  color: #696969;
+  font-weight: 500;
+}
+
+.seisaku-title h5 {
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: #696969;
+  font-weight: 600;
+}
+
+.seisaku-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.seisaku-name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1b1b1b;
+  padding-left: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+.seisaku-kyacchi {
+  font-size: 20px;
+  margin-bottom: 65px;
+  padding-left: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #696969;
+}
+
+.list_box {
+  max-width: 1152px;
+  border: 1px solid #b6b6b6;
+  margin-left: 24px;
+}
+
+dl {
+  display: flex;
+  align-items: center;
+}
+
+dl + dl {
+  border-top: 1px solid #b6b6b6;
+}
+
+dt {
+  width: 150px;
+  background: #3a3a3a;
+  text-align: center;
+  color: #f8f8f8;
+  padding: 50px 0;
+  align-items: center;
+  border-right: none;
+  letter-spacing: 3px;
+}
+
+dd {
+  width: calc(100% - 150px);
+  padding: 12px 16px;
+  line-height: 1.8;
+}
+
+.design-btn{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    width: 800px;
+    gap: 48px;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 40px 0;
+}
+
+/* テキスト */
+.button-wrapper span.text {
+  color: #2b2b2b;
+}
+
+/* ボタン全体 */
+.circle-button {
+  position: relative;
+  width: 60px; /* 横幅 */
+  height: 60px; /* 高さ */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 中央に置く矢印 */
+.circle-button span.arrow {
+  font-size: 24px; /* 矢印の大きさ */
+  color: #000; /* 矢印の色（黒） */
+  z-index: 2; /* 円より前面に表示 */
+}
+
+/* SVGをボタン全体に重ね、黒線の開始位置を上に */
+.circle-button svg {
+  position: absolute; /* ボタンの上に重ねる */
+  top: 0;
+  left: 0; 
+  transform: rotate(-90deg); /* 円の描画開始位置を上側にする */
+}
+
+/* 2つの円に共通する見た目 */
+.circle-button circle {
+  fill: none; /* 円の内側を塗りつぶさない */
+  stroke: #cecece;
+  stroke-width: 2; /* 線の太さ */
+}
+
+/* 上に重ねる黒い進捗用の円 */
+.circle-button circle.progress {
+  stroke: #222121; /* 黒い線の色 */
+  stroke-dasharray: 200; /* 線を円周と同程度の長さの破線として扱う */
+  stroke-dashoffset: 200; /* 最初は線をずらして隠す */
+  transition: stroke-dashoffset 0.8s ease; /* 線の表示・非表示を0.8秒でなめらかに動かす */
+}
+
+/* ボタンにマウスを乗せると黒線を一周表示する */
+.circle-button:hover circle.progress {
+  stroke-dashoffset: 0; /* ずらした線を元の位置に戻して表示する */
+}
